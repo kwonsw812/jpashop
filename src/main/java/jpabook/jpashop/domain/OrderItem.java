@@ -8,7 +8,7 @@ public class OrderItem {
     @Column(name = "ORDER_ITEM_ID")
     private Long id;
 
-    @Column(name = "ORDER_ID")
+    @Column(name = "ORDERITEM_ID")
     private Long orderId;
 
     @ManyToOne
@@ -19,7 +19,7 @@ public class OrderItem {
     @JoinColumn(name = "ITEM_ID")
     private Item item;
 
-    private int orderPrivce;
+    private int orderPrice;
     private int count;
 
     public Long getId() {
@@ -54,12 +54,12 @@ public class OrderItem {
         this.item = item;
     }
 
-    public int getOrderPrivce() {
-        return orderPrivce;
+    public int getOrderPrice() {
+        return orderPrice;
     }
 
-    public void setOrderPrivce(int orderPrivce) {
-        this.orderPrivce = orderPrivce;
+    public void setOrderPrice(int orderPrice) {
+        this.orderPrice = orderPrice;
     }
 
     public int getCount() {
